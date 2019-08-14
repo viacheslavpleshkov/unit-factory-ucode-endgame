@@ -38,11 +38,11 @@ void fishMV1() {
 
       getmaxyx(stdscr, max_y, max_x);
 
-      int level = 3;
+      int level = 1;
 
       int xboot = 22;
 
-      int counter = 4;
+      int counter = 0;
       int health = 3;
       int Ay0r = Ay0;
       int Ay1r = Ay1;
