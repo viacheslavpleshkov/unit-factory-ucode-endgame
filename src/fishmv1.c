@@ -58,7 +58,7 @@ void fishMV1() {
     SeaPlant(max_x, max_y);
     for(;;) {
         //Boot start
-        eardAscii(health);
+        heardAscii(health);
         //Boot end
         ++j;
         if (j == 4){
