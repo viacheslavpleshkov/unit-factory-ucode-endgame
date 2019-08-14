@@ -1,157 +1,145 @@
 #include "header.h"
 
 void fishMV1() {
-      int max_x = 0;
-      int max_y = 0;
-      int yD = 5;
-      srand(time(NULL));
-      int randFish = rand() % 1000 % 100;
-      int randAy = rand()% 1000 % 5;
-      initscr();
-      curs_set(0);
-      noecho();
-      keypad(stdscr, TRUE);
+    int max_x = 0;
+    int max_y = 0;
+    int yD = 5;
+    srand(time(NULL));
+    int randFish = rand() % 1000 % 100;
+    int randAy = rand()% 1000 % 5;
+    initscr();
+    curs_set(0);
+    noecho();
+    keypad(stdscr, TRUE);
     
-      int Ax0 = max_x;
-      int Ay0 = 25;
-      int DAy0 = 25;
-      int DAx0 = max_x;
+    int Ax0 = max_x;
+    int Ay0 = 25;
+    int DAy0 = 25;
+    int DAx0 = max_x;
 
-      int Ax1 = max_x;
-      int Ay1 = 25;
-      int DAy1 = 25;
-      int DAx1 = max_x;
+    int Ax1 = max_x;
+    int Ay1 = 25;
+    int DAy1 = 25;
+    int DAx1 = max_x;
 
-      int Ax2 = max_x - 22;
-      int Ay2 = 25;
-      int DAy2 = 25;
-      int DAx2 = max_x - 22;
+    int Ax2 = max_x - 22;
+    int Ay2 = 25;
+    int DAy2 = 25;
+    int DAx2 = max_x - 22;
 
-      int Ax3 = max_x - 33;
-      int Ay3 = 25;
-      int DAy3 = 25;
-      int DAx3 = max_x - 33;
+    int Ax3 = max_x - 33;
+    int Ay3 = 25;
+    int DAy3 = 25;
+    int DAx3 = max_x - 33;
 
-      int x = 13;
-      int y = 25;
-      int j = 0;
+    int x = 13;
+    int y = 25;
+    int j = 0;
 
-      getmaxyx(stdscr, max_y, max_x);
+    getmaxyx(stdscr, max_y, max_x);
 
-      int level = 1;
+    int level = 1;
 
-      int xboot = 22;
+    int xboot = 22;
 
-      int counter = 0;
-      int health = 3;
-      int Ay0r = Ay0;
-      int Ay1r = Ay1;
-      int Ay2r = Ay2;
-      int Ay3r = Ay3;
+    int counter = 0;
+    int health = 3;
+    int Ay0r = Ay0;
+    int Ay1r = Ay1;
+    int Ay2r = Ay2;
+    int Ay3r = Ay3;
 
-      Wave(max_x,3);
-      Wave(max_x,4);
-      SeaPlant(max_x, max_y);
-      level1(max_y,max_x);
-      Wave(max_x,3);
-      Wave(max_x,4);
-      SeaPlant(max_x, max_y);
-      for(;;) {
-            //Boot start
-            heardAscii(health);
-            //Boot end
-            ++j;
-            if (j == 4){
-                  j = 0;
-            }
-            if ( j == 3 ){
-                  Boot(xboot);
-                  if (max_x -22 == xboot) {
-                        ClearBoot(max_x);
-                        xboot = 22;
-                  }
+    Wave(max_x,3);
+    Wave(max_x,4);
+    SeaPlant(max_x, max_y);
+    level1(max_y,max_x);
+    Wave(max_x,3);
+    Wave(max_x,4);
+    SeaPlant(max_x, max_y);
+    for(;;) {
+        //Boot start
+        eardAscii(health);
+        //Boot end
+        ++j;
+        if (j == 4){
+            j = 0;
+        }
+        if ( j == 3 ){
+            Boot(xboot);
+                if (max_x -22 == xboot) {
+                    ClearBoot(max_x);
+                    xboot = 22;
+                }
             xboot++;
             }
             if (health == 0) {
-            clear();
-            game_over(stdscr,max_x,max_y);
-            sleep(2);
-            endwin();
-            return;
-       }
-       mvprintw(0,0," %d / 5 ", counter);
+                clear();
+                game_over(stdscr,max_x,max_y);
+                sleep(2);
+                endwin();
+                return;
+        }
+        mvprintw(0,0," %d / 5 ", counter);
 
-       if (level == 1) {
-          if (Ax0 == x + 5 && Ay0r >= y + 1 && Ay0r <= y + 2 ) {
-              ++counter;
-              Ax0 = 0;
-          }
-          else if (Ax1 == x + 5 && Ay1r >= y + 1 && Ay1r <= y + 2)
-          {
-               Ax1 = 0;
-               Ax2 = 0;
-               clear();
-               game_over(stdscr,max_x,max_y);
-               sleep(2);
-               endwin();
-               return;
-
-          }
-          else if (Ax2 == x + 5 && Ay2r + 4 >= y + 1 && Ay2r <= y + 2)
-          {
-               Ax2 = 0;
-               clear();
-               game_over(stdscr,max_x,max_y);
-               sleep(2);
-               endwin();
-               return;
-          }
-          else if (Ax3 == x + 5 && Ay3r + 8 >= y + 1 && Ay3r <= y + 2) {
-               Ax3 = 0;
-               clear();
-               game_over(stdscr,max_x,max_y);
-               sleep(2);
-               endwin();
-               return;
+        if (level == 1) {
+            if (Ax0 == x + 5 && Ay0r >= y + 1 && Ay0r <= y + 2 ) {
+                ++counter;
+                Ax0 = 0;
+            } else if (Ax1 == x + 5 && Ay1r >= y + 1 && Ay1r <= y + 2) {
+                Ax1 = 0;
+                Ax2 = 0;
+                clear();
+                game_over(stdscr,max_x,max_y);
+                sleep(2);
+                endwin();
+                return;
+          } else if (Ax2 == x + 5 && Ay2r + 4 >= y + 1 && Ay2r <= y + 2) {
+                Ax2 = 0;
+                clear();
+                game_over(stdscr,max_x,max_y);
+                sleep(2);
+                endwin();
+                return;
+          } else if (Ax3 == x + 5 && Ay3r + 8 >= y + 1 && Ay3r <= y + 2) {
+                Ax3 = 0;
+                clear();
+                game_over(stdscr,max_x,max_y);
+                sleep(2);
+                endwin();
+                return;
           }
         }
-        //start-health
         if (Ax0 == x) {
-          if (Ax0 == x && Ay0r >= y && Ay0r <= y + 2 ) {
-              ++health;
-          }
-              --health;
-        }
+            if (Ax0 == x && Ay0r >= y && Ay0r <= y + 2 ) {
+                ++health;
+            }
+                --health;
+            }
         //end-health
         if (level == 2) {
-             if (Ax0 == x + 10 && Ay0r >= y + 1 && Ay0r  <= y + 3) {
-                 ++counter;
-                 Ax0 = 0;
-             }
-             else if (Ax1 == x + 10 && Ay1r + 2 >= y + 1  && Ay1r  <= y + 3)
-             {
-                 ++counter;
-                 Ax1 = 0;
-             }
+            if (Ax0 == x + 10 && Ay0r >= y + 1 && Ay0r  <= y + 3) {
+                ++counter;
+                Ax0 = 0;
+            } else if (Ax1 == x + 10 && Ay1r + 2 >= y + 1  && Ay1r  <= y + 3) {
+                ++counter;
+                Ax1 = 0;
+              }
              //start-health
              //end-health
              //start-health
-             if (Ax1 == x + 10) {
-               if (Ax1 == x + 10 && Ay1r + 2 >= y + 1  && Ay1r  <= y + 3) {
-                   ++health;
-               }
-                   --health;
-             }
-             else if (Ax2 == x + 10 && Ay2r + 4 >= y + 1 && Ay2r <= y + 3)
-             {
-                   Ax2 = 0;
-                   clear();
-                   game_over(stdscr,max_x,max_y);
-                   sleep(2);
-                   endwin();
-                   return;
-             }
-             else if (Ax3 == x + 10 && Ay3r + 8 >= y + 1 && Ay3r <= y + 3) {
+              if (Ax1 == x + 10) {
+                  if (Ax1 == x + 10 && Ay1r + 2 >= y + 1  && Ay1r  <= y + 3) {
+                      ++health;
+                  }
+                  --health;
+              } else if (Ax2 == x + 10 && Ay2r + 4 >= y + 1 && Ay2r <= y + 3) {
+                  Ax2 = 0;
+                  clear();
+                  game_over(stdscr,max_x,max_y);
+                  sleep(2);
+                  endwin();
+                  return;
+             } else if (Ax3 == x + 10 && Ay3r + 8 >= y + 1 && Ay3r <= y + 3) {
                   Ax3 = 0;
                   clear();
                   game_over(stdscr,max_x,max_y);
@@ -166,15 +154,13 @@ void fishMV1() {
                   ++counter;
                   Ax0 = 0;
               }
-              else if (Ax1 == x + 10 && Ay1r >= y + 1 && Ay1r <= y + 5)
-              {
-                   ++counter;
-                   Ax1 = 0;
+              else if (Ax1 == x + 10 && Ay1r >= y + 1 && Ay1r <= y + 5) {
+                  ++counter;
+                  Ax1 = 0;
               }
-              else if (Ax2 == x + 10 && Ay2r + 4 >= y + 1 && Ay2r <= y + 5)
-              {
-                   ++counter;
-                   Ax2 = 0;
+              else if (Ax2 == x + 10 && Ay2r + 4 >= y + 1 && Ay2r <= y + 5) {
+                  ++counter;
+                  Ax2 = 0;
               }
               //start-health
               if (Ax1 == x + 9) {
@@ -366,7 +352,7 @@ void fishMV1() {
       }         // наша рыбка
     } else if (y < 6){
              y = 6;
-    } else if (y > max_y - 9){
+    } else if (y > max_y - 9) {
              y = max_y - 9;
     }
 
