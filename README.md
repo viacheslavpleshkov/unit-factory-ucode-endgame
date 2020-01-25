@@ -18,7 +18,7 @@ C, Ncurses, Makefile, Game, Terminal, Unix
 1. Clone the repo and `cd` into it
 1. Run this command `make all`
 
-## Screenshot
+## Screenshots
 <a href="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame" target="_blank">
     <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame/blob/master/.git_images/screenshot-1.png?raw=true">
 </a>
