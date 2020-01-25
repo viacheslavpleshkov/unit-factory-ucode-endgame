@@ -19,20 +19,20 @@ C, Ncurses, Makefile, Game, Terminal, Unix
 1. Run this command `make all`
 
 ## Screenshot
-<a href="https://apply.ucode.world/" target="_blank">
+<a href="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame" target="_blank">
     <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame/blob/master/.git_images/screenshot-1.png?raw=true">
 </a>
-<a href="https://apply.ucode.world/" target="_blank">
+<a href="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame" target="_blank">
     <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame/blob/master/.git_images/screenshot-2.png?raw=true">
 </a>
-<a href="https://apply.ucode.world/" target="_blank">
+<a href="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame" target="_blank">
     <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame/blob/master/.git_images/screenshot-3.png?raw=true">
 </a>
-<a href="https://apply.ucode.world/" target="_blank">
-    <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame/blob/master/.git_images/uscreenshot-4.png?raw=true">
+<a href="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame" target="_blank">
+    <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame/blob/master/.git_images/screenshot-4.png?raw=true">
 </a>
-<a href="https://apply.ucode.world/" target="_blank">
-    <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame/blob/master/.git_images/uscreenshot-5.png?raw=true">
+<a href="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame" target="_blank">
+    <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-endgame/blob/master/.git_images/screenshot-5.png?raw=true">
 </a>
 
 ## Author
