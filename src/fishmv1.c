@@ -38,7 +38,7 @@ void fishMV1() {
 
     getmaxyx(stdscr, max_y, max_x);
 
-    int level = 3;
+    int level = 1;
 
     int xboot = 22;
 
